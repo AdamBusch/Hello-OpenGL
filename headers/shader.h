@@ -6,21 +6,21 @@
 
 class Shader
 {
-  public:
-    Shader(const std::string &fileName);
+public:
+  Shader(const std::string &fileName);
 
-    void Bind();
+  void Bind();
 
-    virtual ~Shader();
+  virtual ~Shader();
 
-  protected:
-  private:
-    static const unsigned int NUM_SHADERS = 2; // Only deal with vertex and fragment shaders
+protected:
+private:
+  static const unsigned int NUM_SHADERS = 2; // Only deal with vertex and fragment shaders
 
-    Shader(const Shader &other){};
-    Shader &operator=(const Shader &other){};
+  Shader(const Shader &other){};
+  void operator=(const Shader &other){};
 
-    GLuint m_program;
-    GLuint m_shaders[NUM_SHADERS];
+  GLuint m_program;
+  GLuint m_shaders[NUM_SHADERS];
 };
 #endif
