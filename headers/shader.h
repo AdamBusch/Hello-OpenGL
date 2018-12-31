@@ -8,14 +8,14 @@ class Shader
 {
 public:
   Shader(const std::string &fileName);
+  virtual ~Shader();
 
   void Bind();
 
-  virtual ~Shader();
-
 protected:
 private:
-  static const unsigned int NUM_SHADERS = 2; // Only deal with vertex and fragment shaders
+  // Only deal with vertex and fragment shaders
+  static const unsigned int NUM_SHADERS = 2;
 
   Shader(const Shader &other){};
   void operator=(const Shader &other){};
